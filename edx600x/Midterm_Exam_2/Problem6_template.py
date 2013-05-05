@@ -55,8 +55,9 @@ def foxGrowth():
             if random.random() <= 1/3.0: # with probability 1/3
                 CURRENTFOXPOP += 1 # gives birth to a new little fox
         else: # if the fox does not succeed in hunting
-            if random.random() <= 9/10.0 and CURRENTFOXPOP > 10: # with probability 1/10, she dies given that there always are at least 10 foxes in the forest
-                CURRENTFOXPOP -=1 # poor fox
+            if random.random() <= 1/10.0 and CURRENTFOXPOP > 10: # with probability 1/10, she dies given that there always are at least 10 foxes in the forest
+            # if random.random() <= 9/10.0 and CURRENTFOXPOP > 10: # uncomment for Problem 6-5 evaluation
+            CURRENTFOXPOP -=1 # poor fox
             
 def runSimulation(numSteps):
     """
